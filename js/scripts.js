@@ -6,8 +6,11 @@ $(document).ready(function(){
       items.push(this.value);
     });
 
+    $("#groceries-input").hide();
+    
+    items.sort();
     items.forEach(function(item){
-      $(".groceries").append("<li>" + item + "</li>");
+      $(".groceries").append("<li>" + item.toUpperCase() + "</li>");
     });
   });
 
